@@ -1,0 +1,556 @@
+,
+              set.map(c => game.loc(
+, {label: `${labelText} (${settingName})`, name: settingName, type: "boolean"}, openOverrideModal)
+, {label: `${labelText} (${settingName})`, name: settingName, type: "number"}, openOverrideModal)
+, {label: `${labelText} (${settingName})`, name: settingName, type: "select", options: options}, openOverrideModal)
+, {label: `${labelText} (${settingName})`, name: settingName, type: "string"}, openOverrideModal)
+, Boolean(settingsRaw.overrides[stateKey] || settingsRaw.overrides[smartKey]));
+, currentStateOn));
+, function() {
+, Gain
+, game.loc(
+, this.checked);
+;}).join(', ')} ()
+? Math.floor(settings.productionSmeltingIridium * totalSmelters) : 0;
+.appendTo(node);
+.filter(item => matcher.test(item[name]))
+.map(item => ({label: item[name], value: item[id]})));
+.on(
+.toggleClass(
+).append(`
+).append(` ⚠️ Safe mode active, masterScriptToggle is disabled `);
+)) && !state.queuedTargetsAll.includes(obj) && !state.triggerTargets.includes(obj)) {
+] : Number.MAX_SAFE_INTEGER;
+{val: "apocalypse", label: "AI Apocalypse", hint: "Perform AI Apocalypse reset by researching Protocol 66 once available"},
+{val: "ascension", label: "Ascension", hint: "Allows research of Incorporeal Existence and Ascension. Ascension Machine is managed by autoPower. Disable autoPrestige if you want to change custom race. Otherwise current one will be used , or default one if there
+{val: "bioseed", label: "Bioseed", hint: "Launches the bioseeder ship to perform prestige when required probes have been constructed"},
+{val: "cataclysm", label: "Cataclysm", hint: "Perform cataclysm reset by researching Dial It To 11 once available"},
+{val: "mad", short_label: "MAD", label: "Mutual Assured Destruction", hint: "MAD prestige once MAD has been researched and all soldiers are home"},
+{val: "none", label: "None", hint: "Endless game"},
+{val: "vacuum", short_label: "Vacuum", label: "Vacuum Collapse", hint: "Build Mana Syphons until the end"},
+{val: "whitehole", label: "Whitehole", hint: "Infuses the blackhole with exotic materials to perform prestige"},
+} else {
+} else if (!(resourceType.resource instanceof Support) && resourceType.resource.currentQuantity >= (maxStateOn * CONSUMPTION_BALANCE_MIN * resourceType.rate)) {
+} else if (building.powered > 0 && building !== buildings.RuinsHellForge) {
+} else if (infusionStep[dataId]) {
+} else if (isArpaProject && res.name === 'Knowledge' && res.income > 0) {
+} else if (isArpaProject) {
+} else if (isMultiSegmented) {
+} else if (list.hasOwnProperty(value)) {
+} else if (resourceType.resource === resources.Tau_Belt_Support) {
+} else if (state.tooltips[dataId]) {
+} else if (target.cost.Knowledge > game.global.resource.Knowledge.max) {
+} else if (type === 'arpa') {
+} else if (type === 'research' || type === 'triggers') {
+}).join('');
+// Adjusting fuel can move production from steel to iron, we need to account that
+// Allow using all resources for fuel until 60s of consumption left, unless demanded.
+// And also let autoMech do minimum preparation, so we won't stuck with near zero potential
+// Ascension Machine and Terraformer missing energy
+// Banquet hall, if unlocked+enabled, will handle low food case automatically by resetting
+// Banquet just has a single on/off switch even above level 1
+// Build all other projects settings rows
+// Disable Belt Space Stations with no workers
+// Elsewhere, prioritizeDemandedResources() demands a few specific materials.
+// Food buildings can't be powered in fasting
+// for finding element in queue
+// If we
+// If we have more than 60 seconds of max consumption worth then its ok to lose some resources.
+// It
+// Lake transport managed separately
+// Make sure we have some transports, so we won't stuck with 0 supply income after disabling collectors, and also let mech manager finish rebuilding after switching floor
+// Max powered amount
+// No luck, set it empty
+// Or try to restore old valid value
+// Settings textarea
+// Spire managed separately
+// Tau Belt support can be overused
+// That can cause massive loss of life if turning off space habitats :-)
+// This can lead to disabling spaceports and then biodomes if not checked
+// This check is mainly so that power producing buildings don't turn off when rate of change goes negative.
+// TODO: quantium lab
+// Tooltips for things with no script objects
+// Try to prevent building bays when they won't have enough time to work out used supplies. It assumes that time to build new bay ~= time to clear floor.
+// We have an item to switch
+// We only care about steel. It isn
+// Wendigo doesn't store food. Let's assume it's always available.
+// Womlings facilities can run understaffed
+/tr>
+&& buildings.BlackholeMassEjector.count > 0 && game.global.interstellar.stellar_engine.exotic < 0.025) {
+&emsp;All Attractors off above this threat
+&emsp;All Attractors on below this threat
+&emsp;Full patrol rating increase below this home garrison fill percent
+&emsp;Lower Rating for each active Predator Drone by
+&emsp;Lower Rating for each active War Droid by
+&emsp;Lower Rating for each Bootcamp by
+&emsp;Minimum minions required to attack an enemy fortress
+&emsp;Start increasing patrol rating at this home garrison fill percent
+&times;
+`), stateKey)
++ (buildings.TauStarRingworld.count >= 1000 ? 1 : 0) // Ringworld built
++ (buildings.TitanQuarters.count > 0 ? 1 : 0) // Titan Mine unlocked
++ (game.global.galaxy.trade ? 1 : 0) // Galaxy trades unlocked
++ (game.global.race['orbit_decayed'] ? 1 : 0) // City tab gone
++ (game.global.race['servants'] ? 1 : 0) // Servants UI
++ (game.global.race['shapeshifter'] ? 1 : 0) // Shifter UI
++ (game.global.race['smoldering'] && buildings.RockQuarry.count ? 1 : 0) // Chrysotile production
++ (game.global.settings.showCargo ? 1 : 0) // Supply tab unlocked
++ (game.global.settings.showEjector ? 1 : 0) // Ejector tab unlocked
++ (game.global.settings.showMarket ? 1000 : 0) // Market tab unlocked
++ (game.global.space.g_factory?.count > 0 ? 1 : 0) // Graphene plant built in lone survivor
++ (game.global.tauceti.mining_ship?.count > 0 ? 1 : 0) // Extractor ship built
++ (game.global.tauceti.tau_factory?.count > 0 ? 1 : 0) // Factory built in lone survivor
++ (game.global.tech.alchemy ?? 0) // Basic & advanced transmutations
++ (game.global.tech.edenic >= 1 ? 1 : 0) // Spire floor 50 Eden access
++ (game.global.tech.focus_cure ?? 0) // Cure techs
++ (game.global.tech.govern ? 1 : 0) // Government unlocked
++ (game.global.tech.irid_smelting ? 1 : 0) // Iridium smelting
++ (game.global.tech.isle >= 3 ? 1 : 0) // Edenic north/south piers -> spirit syphon tech
++ (game.global.tech.isolation ? 1 : 0) // Solar tabs gone
++ (game.global.tech.m_ignite ? 1 : 0) // Ignition Device built
++ (game.global.tech.m_smelting >= 2 ? 1 : 0) // TP Iridium smelting
++ (game.global.tech.palace >= 4 ? 1 : 0) // Edenic sealed tomb -> energy drain tech
++ (game.global.tech.psychic ?? 0) // Psychic powers
++ (game.global.tech.psychicthrall ?? 0) // Psychic powers
++ (game.global.tech.queue ? 1 : 0) // Queue unlocked
++ (game.global.tech.r_queue ? 1 : 0) // Research queue unlocked
++ (game.global.tech.replicator ? 1 : 0) // Matter Replicator unlocked
++ (game.global.tech.spy >= 2 ? 1 : 0) // SpyOp governor task
++ (game.global.tech.syard_armor ?? 0)
++ (game.global.tech.syard_class ?? 0) // Tiers of unlocked components
++ (game.global.tech.syard_engine ?? 0)
++ (game.global.tech.syard_power ?? 0)
++ (game.global.tech.syard_sensor ?? 0)
++ (game.global.tech.syard_weapon ?? 0)
++ (game.global.tech.tau_gas2 >= 5 ? 1 : 0) // Alien Space Station built
++ (game.global.tech.trade ? 1 : 0) // Trade Routes unlocked
++ (game.global.tech.womling_tech ?? 0) // Womling techs
++ (haveTech('eris', 2) ? 1 : 0) // Eris scanning
++ (haveTech('eris') ? 1 : 0) // Eris syndicate
++ (haveTech('kuiper') ? 1 : 0) // Kuiper syndicate
++ (haveTech('tauceti') ? 1 : 0); // Interstellar drive researched, explorer inlocked
++ (haveTech('titan_ai_core') ? 1 : 0) // AI core built, drones unlocked
++ (haveTech('titan', 3) && haveTech('enceladus', 2) ? 1 : 0) // Enceladus syndicate
++ (haveTech('triton', 2) ? 1 : 0) // Triton syndicate
++ (resources.Containers.isUnlocked() ? 1 : 0) // Containers in storage tab
++ (resources.Crates.isUnlocked() ? 1 : 0) // Crates in storage tab
++ building._vueBinding;
+<div class=
+<li class=
+<span class=
+<ul class=
+= 0; targetMech--) {
+= resourceCost && res.income > 0) {
+=', boolean variables - using '=='. String variables not currently supported by triggers.">Result
+> Disabled <span class=
+>(${segmentedTimeLeft.resource}) `;
+>${action} `;}).join(', ')} for ${conflict.resList.map(res => {return `<span class=
+>${getNiceNumber(resources.Power.maxQuantity)}
+>${resourceTimeLeft}
+>${targetName}
+>${targetSegments}
+>${targetTimeLeft} <span class=
+>Contaminated in [${poly.timeFormat(missingExotics / massPerSec)}] `);
+>Next Tech Level in ~[${poly.timeFormat(eta)}] `);
+$("#script_logFilter").on(
+$("#script-script-warning").remove();
+$(`#active_targets .target-type-box.${type}`).hide();
+$(`#active_targets .target-type-box.${type}`).show();
+$(`#active_targets ul.active_targets-list.${type}`).html(queuedTargets.map(target => {
+$(node).append(`<div id=
+$(node).append(`<div style=
+$(node).append(`<p class=
+$(node).append(`<span class=
+$(node).find('.costList .res-Blood_Stone').append(` (+${infusionStep[dataId]})`);
+$(node).find('div:eq(1)>div:eq(5)').append(` (${completion}%)`);
+${!game.global.race['no_trade']?
+${building.extraDescription}`;
+${headerText}
+${heading}
+${labelText}
+${options}
+${res.title}
+${settingKey}
+${settingsRaw.logFilter}
+${targetNameDisplay} <span class=
+1st Pass
+2nd Pass
+3rd Pass
+A.R.P.A.
+Active trigger, processing...
+actualRequiredFactories = Math.min(actualRequiredFactories, affordableAmount);
+addSettingsHeader1(currentNode, "Game Messages");
+addSettingsNumber(currentNode, "arpaStep", "Preferred progress step", "Projects will be weighted and build in this steps. Increasing number can speed up constructing. Step will be adjusted down when preferred step above remaining amount, or surpass storage caps. Weightings below will be multiplied by current step. Projects builded by triggers will always have maximum possible step.");
+addSettingsString(currentNode, "log_prestige_format", "Prestige Log Format", "Available placeholders: {resetType}, {species}, {timestamp} (in game days). Use {eval: XXX } to log custom information");
+addSettingsToggle(currentNode, "arpaScaleWeighting", "Scale weighting with progress", "Projects weighting scales
+addSettingsToggle(currentNode, "hellTurnOffLogMessages", "Turn off patrol and surveyor log messages", "Automatically turns off the hell patrol and surveyor log messages");
+addSettingsToggle(currentNode, "log_" + id, label, `If logging is enabled then logs ${label} actions`));
+addToggleCallbacks($(`
+addToggleCallbacks(smartNode, smartKey);
+Assign governor task
+Assigns 3% extra strorage above required amounts, ensuring that required quantity will be actually reached, even if other part of script trying to sell\\eject\\switch production, etc. When manual trades enabled applies additional adjust derieved from selling threshold.
+AutoARPA weighting:
+AutoBuild disabled
+bireme.tryAdjustState(biremeCount - bireme.stateOnCount);
+biremeCount--;
+break;
+buildFilterRegExp();
+building.extraDescription = `Make sure all ${resourceType.resource.title} producers are above consumers in buildings list! ${building.extraDescription}`;
+buildings.SpirePurifier.extraDescription = `Supported Supplies: ${Math.floor(bestSupplies)} ${buildings.SpirePurifier.extraDescription}`;
+buildSettingsSectionImpl($("#script_settings"), sectionId, sectionName, resetFunction, updateSettingsContentFunction);
+buildSettingsSectionImpl(parentNode, sectionId, sectionName, resetFunction, () => updateSettingsContentFunction(""));
+By atomic mass
+By resource quantity
+callback(null);
+callback(ui.item.value);
+callback(value);
+change: onChange // Keyboard type
+City Soldiers
+City Soldiers Max
+className = 'has-text-success',
+clickable.on("click", (e) => {
+Conflicts with
+console.error("Error in error handler: %o", internalError);
+const builder = (currentNode) => {
+const costs = target.cost;
+const costsHTML = Object.keys(costs).map(resource => {
+const isReplicatingClassName = (game.global.race.replicator && game.global.race.replicator.res === resource) ? 'is-replicating' : '';
+const prestigeTypes = [
+const progressBarWidth = (res.currentQuantity / resourceCost) * 100;
+const project = ProjectManager.priorityList[i];
+const resourceCostTotal = (target.cost[resource] * remainingSegments);
+const resourceTimeLeftRaw = (resourceCostTotal - game.global.resource[resource].amount) / game.global.resource[resource].diff;
+const segmentedTimeLeft = getMultiSegmentedTimeLeft(target);
+const targetNameDisplay = `<span class=
+const timeLeft = longestTimeLeft === Infinity ? 'Never' : poly.timeFormat(longestTimeLeft);
+const timeLeftRaw = (resourceCost - res.currentQuantity) / res.income;
+continue;
+currentNode.append(`
+currentNode.append($(` `).val(msg));
+currentNode.empty().off("*");
+Dead Soldiers
+delay: 0,
+Disabled
+div:first-child')[0].__vue__;
+document.documentElement.scrollTop = document.body.scrollTop = currentScrollPosition;
+Eject mode
+enabledCallBack();
+expo -= game.global.race['lone_survivor'] ? 0.1 : 0;
+focus: onChange, // Arrow keys press
+for
+for (let fuel of fuels) {
+for (let i = 0; i
+for (let i = 0; i < ProjectManager.priorityList.length; i++) {
+for (let i = maxBay; i >= 0; i--) {
+for (let j = 0; j
+for (let productionCost of fuel.cost) {
+fuelAdjust[fuel.id] = maxAllowedUnits - m.fueledCount(fuel);
+function addSettingsHeader1(node, headerText) {
+function addSettingsHeader2(node, headerText) {
+function addSettingsList(node, settingName, labelText, hintText, list) {
+function addSettingsNumber(node, settingName, labelText, hintText) {
+function addSettingsSelect(node, settingName, labelText, hintText, optionsList) {
+function addSettingsString(node, settingName, labelText, hintText) {
+function addSettingsToggle(node, settingName, labelText, hintText, enabledCallBack, disabledCallBack) {
+function addStandardHeading(node, heading) {
+function addTooltip(node) {
+function buildAllBuildingEnabledSettingsToggle() {
+function buildAllBuildingStateSettingsToggle() {
+function buildSelectOptions(optionsList) {
+function buildSettingsSection(sectionId, sectionName, resetFunction, updateSettingsContentFunction) {
+function buildSettingsSection2(parentNode, secondaryPrefix, sectionId, sectionName, resetFunction, updateSettingsContentFunction) {
+function createSettingToggle(node, settingKey, title, enabledCallBack, disabledCallBack) {
+function genericResetFunction(resetFunction, sectionName) {
+function getMultiSegmentedTimeLeft(target) {
+function updateActiveTargetsUI(queuedTargets, type) {
+function updateTabs(update) {
+Hell Patrol Size
+Hell Patrols
+Hell Soldiers
+here .
+hidden> `);
+Id
+if (!resourceType.resource.isUnlocked()) {
+if ((building === buildings.SiriusAscensionTrigger || building === buildings.RedAtmoTerraformer) && availablePower
+if ($.isEmptyObject(target.cost)) {
+if (availablePower >= getCitadelConsumption(maxStateOn)) {
+if (building === buildings.Banquet) {
+if (building === buildings.BeltSpaceStation) {
+if (building === buildings.NeutronCitadel) {
+if (building.is.smart && building.autoStateSmart) {
+if (building.is.smart) {
+if (building.isSwitchable()) {
+if (buildings.Banquet.stateOnCount) {
+if (confirm("Are you sure you wish to reset " + sectionName + " Settings?")) {
+if (conflict) {
+if (dataId === 'powerStatus') {
+if (description) {
+if (foundItem !== undefined){
+if (fuelAdjust[fuel.id]
+if (fuelRemoved > smelterIronCount) {
+if (game.global.race['fasting']) {
+if (game.global.race['shapeshifter']){
+if (game.global.settings.showShipYard) { // TP Ship Yard
+if (isArpaProject) {
+if (isMultiSegmented) {
+if (manageSpire && (building === buildings.SpirePort || building === buildings.SpireBaseCamp || building === buildings.SpireMechBay)) {
+if (manageSpire && resources.Spire_Support.rateOfChange > 0) {
+if (manageTransport && (building === buildings.LakeTransport || building === buildings.LakeBireme)) {
+if (maxStateOn !== currentStateOn) {
+if (missingProducer[resourceType.resource.id] && resourceType.rate
+if (missingProducer[resourceType.resource.id]) {
+if (missingStorage) {
+if (nextBireme > nextTransport) {
+if (obj === buildings.TauRedJeff && buildings.TauRedWomlingLab.count > 0) {
+if (Object.values(list).some(obj => obj[id] === value)) {
+if (queuedTargets.length) {
+if (res === resources.Soul_Gem) {
+if (res.currentQuantity
+if (resource.currentQuantity
+if (resources.Power.currentQuantity <= resources.Power.maxQuantity || haveTech('replicator')) { // Saving power, unless we can afford everything
+if (resourceTimeLeftRaw > longestTimeLeft && resourceCostTotal > game.global.resource[resource].amount) {
+if (resourceType.resource === resources.Food) {
+if (resourceType.resource === resources.Womlings_Support) {
+if (resourceType.resource.storageRatio > 0.05 || isHungryRace()) {
+if (safeMode) {
+if (secondaryPrefix !== "") {
+if (section.find(`#${contentID}`).is(":empty")) {
+if (set) {
+if (settings.buildingsLimitPowered) {
+if (settingsRaw[settingName] && enabledCallBack) {
+if (steelRemoved <= smelterSteelCount) {
+if (storageSupplies >= missingStorage.cost[
+if (target instanceof Project) {
+if (target instanceof Technology && targetTimeLeft === '') {
+if (target instanceof Technology && timeLeftRaw > researchTimeLeft) {
+if (target instanceof Technology) {
+if (target.count && !isMultiSegmented) {
+if (target.instance && target.instance.time) {
+if (type === 'buildings') {
+if (ui.item !== null && Object.values(list).some(obj => obj[id] === ui.item.value)) {
+if (usedMaterial.currentQuantity
+If active, the replicator scheduler governor task will be set, the power adjustment will be enabled.
+if(ui.item === null){
+In
+income
+Iridium: maxAllowedIridium - smelterIridiumCount,
+is demanded
+isArpaProject = type === 'arpa' || target instanceof Project,
+isMultiSegmented = target.is && target.is.multiSegmented,
+isTablessBuilding = type === 'buildings' && !target._tab;
+kt
+Legacy (deprecated)
+Legacy mode, similar to previous script behavior. Only the resource with the highest weighting is picked. If multiple resources have the same weighting then it will focus exclusively on one of those resources. This mode exists only to give you time to migrate your config to using the priority field.
+let [bestSupplies, bestPort, bestBase] = getBestSupplyRatio(spireSupport, maxPorts, maxCamps);
+let [storageSupplies, storagePort, storageCamp] = getBestSupplyRatio(spireSupport - i, currentPort, currentCamp);
+let [targetSupplies, targetPort, targetCamp] = getBestSupplyRatio(spireSupport - targetMech, maxPorts, maxCamps);
+let bireme = buildings.LakeBireme;
+let biremeCount = bireme.count;
+let buildAllowed = settings.autoBuild && !(settings.autoMech && MechManager.isActive) && !(settings.autoPrestige && settings.prestigeType ===
+let clickable = $(` ⚠️ ${title} `);
+let collapsibleNode = $(
+let completion = Math.floor((curTech / nextTech) * 100);
+let conflict = getCostConflict(obj);
+let curTech = game.global.tauceti.womling_lab.tech;
+let dataId = node.dataset.id;
+let description = getTooltipInfo(obj);
+let eta = rate > 0 ? Math.ceil((nextTech - curTech) / rate) : -1;
+let expo = game.global.stats.achieve.overlord?.l >= 5 ? 4.9 : 5;
+let foundItem = Object.values(list).find(obj => obj[name] === this.value);
+let fuelAdjust = {};
+let fuels = m.managedFuelPriorityList();
+let lakeSupport = resources.Lake_Support.rateOfChange;
+let listBlock = $(`
+let longestResource = '',
+let massPerSec = (resources.Elerium.atomicMass * game.global.interstellar.mass_ejector.Elerium + resources.Infernite.atomicMass * game.global.interstellar.mass_ejector.Infernite) || -1;
+let matcher = new RegExp($.ui.autocomplete.escapeRegex(request.term), "i");
+let maxAllowedIridium = m.Productions.Iridium.unlocked && !resources.Iridium.isCapped()
+let maxAllowedSteel = totalSmelters - smelterIridiumCount;
+let mechQueued = state.queuedTargetsAll.includes(buildings.SpireMechBay);
+let missingExotics = (0.025 - game.global.interstellar.stellar_engine.exotic) * 1e10;
+let missingStorage =
+let newTableBodyText = "";
+let nextBireme = (1 - (rating ** (biremeCount - 1))) * (transportCount * 5);
+let nextCost =
+let nextTech = ((game.global.tech.womling_tech + 2) ** expo);
+let nextTransport = (1 - (rating ** biremeCount)) * ((transportCount - 1) * 5);
+let oldHash = state.tabHash;
+let options = buildSelectOptions(optionsList);
+let projectElement = $(
+let puriQueued = state.queuedTargetsAll.includes(buildings.SpirePurifier);
+let queueid = '';
+let rate = (game.global.tauceti.womling_lab.scientist / 2) * Math.min(1, game.global.tauceti.womling_lab.scientist * 0.1);
+let rating = game.global.blood['spire'] && game.global.blood.spire >= 2 ? 0.8 : 0.85;
+let remainingSegments = target.gameMax - target.count;
+let remainingSmelters = totalSmelters;
+let res = resources[resource],
+let resource = productionCost.resource;
+let resourceCost = costs[resource];
+let set = linkedBuildings.find(set => set.includes(building));
+let smartNode = $(`
+let smeltAdjust = {
+let smelterIridiumCount = m.smeltingCount(m.Productions.Iridium);
+let smelterIronCount = m.smeltingCount(m.Productions.Iron);
+let smelterSteelCount = m.smeltingCount(m.Productions.Steel);
+let stationStorage = parseFloat(game.breakdown.c.Elerium?.[game.loc(
+let steelRemoved = fuelRemoved - smelterIronCount;
+let stringsUrl = `strings/strings${game.global.settings.locale === "en-US" ? "" : "." + game.global.settings.locale}.json`
+let supportedAmount = resourceType.resource.rateOfChange / resourceType.rate;
+let tableBodyNode = $(
+let targetName = target.name,
+let toggle = $(`
+let transport = buildings.LakeTransport;
+let transportCount = transport.count;
+List of message IDs to filter, all game messages can be found
+listNode.autocomplete({
+listNode.val(list[value][name]);
+Locked
+longestResource = resource;
+longestTimeLeft = 0;
+longestTimeLeft = resourceTimeLeftRaw;
+Low priority
+m.increaseFuel(fuel, fuelAdjust[fuel.id]);
+mainVue.s.civTabs = 7;
+mainVue.s.civTabs = game.global.settings.civTabs;
+mainVue.s.tabLoad = false;
+mainVue.s.tabLoad = true;
+mainVue.toggleTabLoad();
+maxAllowedUnits = Math.floor(0.5 * remainingSmelters + 37.5);
+maxAllowedUnits = Math.min(maxAllowedUnits, affordableAmount);
+Maximum amount reached
+maxStateOn = 0;
+maxStateOn = Math.min(maxStateOn, 1);
+maxStateOn = Math.min(maxStateOn, availablePower / building.powered);
+maxStateOn = Math.min(maxStateOn, building.autoMax);
+maxStateOn = Math.min(maxStateOn, supportedAmount);
+maxStateOn--;
+mechQueued && nextMechCost
+Mercenary Cost
+minLength: 2,
+More script options available in Settings tab ${overrideKeyLabel}+click options to open
+msg = `${msg}n-----nError in error handler: ${internalError}`;
+msg = `${msg}nnScript version: ${versionPart} ${SCRIPT_VERSION_EXTRA}n`;
+Nanite mode
+node.addClass("script_bg_" + smartKey);
+node.addClass("script_bg_" + stateKey);
+node.append(`
+node.append(smartNode);
+node.toggleClass(
+Not enough storage
+Not needed for current prestige
+notes.push(`Conflicts with ${conflict.actionList.map(action => {return `<span class=
+null;
+Object.keys(target.cost).forEach(resource => {
+Occupy last foreign power once other two are controlled, and unification is researched to speed up unification. Disable if you want annex\\purchase achievements.
+parentNode.append(`
+Planet Weighting = Biome Weighting + Trait Weighting + (Extras Intensity * Extras Weightings)
+Prestige for new evolutions:
+Prioritize keeping materials stockpiled
+Projects ignored Pre-MAD
+Queued project, processing...
+queueid = `${target._tab}${target.id}`;
+queueid = isTablessBuilding ? `${target.id}` : `${target._tab}-${target.id}`;
+queueid = target.id;
+remainingSegments = (100 - target.progress) / target.currentStep;
+remainingSmelters -= maxAllowedUnits;
+Replicator only picks from enabled resources with the current highest valid priority (or -1 priority). After that, replicator use is split between resources of identical weighting. Setting configures how that split happens.
+researchTimeLeft = 0,
+researchTimeLeft = timeLeftRaw;
+reserved
+resetButton.click();
+resetButton.disabled = false;
+resetFunction();
+Resource capped
+resource: longestResource,
+resourceCost = costs[resource] * ((100 - target.progress) / target.currentStep);
+resourceCost = costs[resource] * (target.gameMax - target.count);
+resources.Asphodel_Powder.incomeAdusted = true;
+resourceTimeLeft = '';
+resourceTimeLeft = `~${resourceTimeLeft}`;
+resourceTimeLeft = `${poly.timeFormat(timeLeftRaw)}`;
+resourceTimeLeft = poly.timeFormat(res.currentQuantity / res.income);
+response(Object.values(list)
+return {
+return `
+return $(`
+return false;
+return listNode;
+return optionsList.map(item => ` ${item.label} `).join();
+return true;
+return;
+s no broken getter, etc.
+s open
+Scrap mechs only when '((OldMechRefund / NewMechCost) / (OldMechDamage / NewMechDamage))' more than given number.&#xA;For the cases when exchanged mechs have same size(1/3 refund) it means that with 1 eff. script allowed to scrap mechs under 33.3%. 1.5 eff. - under 22.2%, 2 eff. - under 16.6%, 0.5 eff. - under 66.6%, 0 eff. - under 100%, etc.&#xA;Efficiency below '1' is not recommended, unless scrap set to 'Full bay', as it's a breakpoint when refunded resources can immidiately compensate lost damage, resulting with best damage growth rate.&#xA;Efficiency above '1' is useful to save resources for more desperate times, or to compensate low soul gems income.
+section.find(`#${resetID}`).on("click", genericResetFunction.bind(null, resetFunction, sectionName));
+section.find(`> #${triggerID}`).on("click", () => {
+select: onChange, // Dropdown list click
+settingsRaw.logFilter = this.value;
+Ship Crew
+smartNode.on(
+smeltAdjust.Iridium += steelRemoved - smelterSteelCount;
+smeltAdjust.Steel += smelterSteelCount;
+smeltAdjust.Steel += steelRemoved;
+source: function(request, response) {
+Species / Genus
+Spends more time on resources that are easy to replicate. A resource with 2x the weighting will have roughly 2x the time spent. Based on differences in atomic mass, resources at similar weightings may have very different quantities.
+Spends more time on resources that are hard to replicate. A resource with 2x the weighting will be focused until you have roughly 2x the amount. Resources at similar weightings will have similar quantities.
+state.tabHash += (game.global.race.ss_genus ?? 'none').split('').reduce((a,b)=>{a=((a
+state.tabHash += 1
+state.tabHash = 0 // Not really a hash, but it should never go down, that's enough to track unlocks. (Except market after mutation in terrifying, 1000 weight should prevent all possible issues)
+Steel: smelterIridiumCount - maxAllowedIridium,
+Supply mode
+supportedAmount = Math.ceil(supportedAmount);
+t demand it here, though, due to order of operations
+t match the search query
+t selected from list
+tableBodyNode.append($(newTableBodyText));
+targetCamp > currentCamp ? buildings.SpireBaseCamp :
+targetName += ` (${target.progress}%)`;
+targetName += ` #${target.count + 1}`;
+targetPort > currentPort ? buildings.SpirePort :
+targetSegments = '',
+targetSegments = `(${target.count} / ${target.gameMax})`;
+targetTimeLeft = '',
+targetTimeLeft = 'Not enough Knowledge';
+targetTimeLeft = 'Waiting on prerequisite';
+targetTimeLeft = `${segmentedTimeLeft.timeLeft}
+targetTimeLeft = `${segmentedTimeLeft.timeLeft} <span class=
+targetTimeLeft = `${target.instance.time}`;
+targetTimeLeft = poly.timeFormat(researchTimeLeft);
+targetTimeLeft = resourceTimeLeft = 'Never';
+This condition is bypassed. Race will have % penalty.
+This condition is met.
+This condition is not met.
+This race have special requirements:
+this.value = "";
+this.value = list[value][name];
+this.value = settingsRaw.logFilter;
+this.value = ui.item.label;
+timeLeft
+Too low
+Total Factory Slot Count
+Total Smelter Slot Count
+Total Soldiers
+Total Soldiers Max
+totalSmelters -= remainingSmelters;
+totalSmelters += m.extraOperating();
+transport.tryAdjustState(transportCount - transport.stateOnCount);
+transportCount--;
+trs[i].style.display = "";
+trs[i].style.display = "none";
+ui.item = {label: this.value, value: foundItem[id]};
+under min materials ratio
+updateSettingsContentFunction();
+updateSettingsContentFunction(secondaryPrefix);
+updateSettingsFromState();
+Warning! This race have special requirements:
+Warning! You have NOT completed an AI Apocalypse with this race, and cannot imitate it.
+Weighting mode
+When enabled script will be allowed to assign some crates and containers even if resulting storage space won't be enough to build new building. It allows to pre-build stock of resources for further use, but can be potentially dungerous.\nIf script not allowed to reassign non-empty storage it can lock storage in position when stored resources can't be used.\nIf script is allowed to reassign non-empty storage it might waste time producing materials which might need to be disposed.
+while (biremeCount + transportCount > lakeSupport) {
+while (maxStateOn > 0) {
+with current progress, making script more eager to spend resources on finishing nearly constructed projects.");
+Wounded Soldiers
+You have completed an AI Apocalypse with this race and can imitate it.
+You should never see this modal body...
+You should never see this modal header...

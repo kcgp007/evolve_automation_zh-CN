@@ -1,0 +1,327 @@
+[
+  {
+    "key": "Colonist",
+    "from": "殖民者",
+    "to": "行星居民"
+  },
+  {
+    "key": "Teamster",
+    "from": "马车夫",
+    "to": "驾驶员"
+  },
+  {
+    "key": "Farmer",
+    "from": "农夫",
+    "to": "农民"
+  },
+  {
+    "key": "Lumberjack",
+    "from": "伐木工",
+    "to": "伐木工人"
+  },
+  {
+    "key": "Quarry Worker",
+    "from": "采石工",
+    "to": "石工"
+  },
+  {
+    "key": "Coal Miner",
+    "from": "煤矿工",
+    "to": "煤矿工人"
+  },
+  {
+    "key": "Cement Worker",
+    "from": "水泥工",
+    "to": "水泥工人"
+  },
+  {
+    "key": "Tormentor",
+    "from": "折磨者",
+    "to": "施虐者"
+  },
+  {
+    "key": "Ghost Trapper",
+    "from": "猎鬼师",
+    "to": "幽灵捕捉者"
+  },
+  {
+    "key": "Elysium Miner",
+    "from": "天堂矿工",
+    "to": "净土石矿工"
+  },
+  {
+    "key": "Unemployed",
+    "from": "失业",
+    "to": "失业人口"
+  },
+  {
+    "key": "Forager",
+    "from": "采集者",
+    "to": "寻觅者"
+  },
+  {
+    "key": "Ship Crew",
+    "from": "舰船船员",
+    "to": "船员"
+  },
+  {
+    "key": "Nanite",
+    "from": "纳米机械",
+    "to": "纳米体"
+  },
+  {
+    "key": "Money",
+    "from": "金钱",
+    "to": "资金"
+  },
+  {
+    "key": "Suspicion",
+    "from": "猜疑",
+    "to": "嫌疑"
+  },
+  {
+    "key": "Omniscience",
+    "from": "全知",
+    "to": "全知之识"
+  },
+  {
+    "key": "Neutronium",
+    "from": "中子素",
+    "to": "中子"
+  },
+  {
+    "key": "Infernite",
+    "from": "烈焰石",
+    "to": "地狱石"
+  },
+  {
+    "key": "Elerium",
+    "from": "埃勒姆",
+    "to": "超铀"
+  },
+  {
+    "key": "Bolognium",
+    "from": "玻洛尼姆",
+    "to": "钋"
+  },
+  {
+    "key": "Vitreloy",
+    "from": "非晶合金",
+    "to": "金属玻璃"
+  },
+  {
+    "key": "Orichalcum",
+    "from": "山铜",
+    "to": "奥利哈刚"
+  },
+  {
+    "key": "Asphodel Powder",
+    "from": "水仙粉",
+    "to": "水仙花粉"
+  },
+  {
+    "key": "Elysanite",
+    "from": "极乐晶",
+    "to": "净土石"
+  },
+  {
+    "key": "Unobtainium",
+    "from": "稀有金属",
+    "to": "难得素"
+  },
+  {
+    "key": "Materials",
+    "from": "材料",
+    "to": "原材料"
+  },
+  {
+    "key": "Soul Gem",
+    "from": "灵魂之石",
+    "to": "灵魂宝石"
+  },
+  {
+    "key": "Brick",
+    "from": "砖块",
+    "to": "砌砖"
+  },
+  {
+    "key": "Nanoweave",
+    "from": "纳米纤维",
+    "to": "纳米织物"
+  },
+  {
+    "key": "Scarletite",
+    "from": "猩红石",
+    "to": "绯绯色金"
+  },
+  {
+    "key": "Quantium",
+    "from": "量子素",
+    "to": "量子"
+  },
+  {
+    "key": "Blessed Essence",
+    "from": "祝福精华",
+    "to": "天使精华"
+  },
+  {
+    "key": "Blood Stone",
+    "from": "血石",
+    "to": "鲜血之石"
+  },
+  {
+    "key": "Artifact",
+    "from": "神器",
+    "to": "上古遗物"
+  },
+  {
+    "key": "Anti-Plasmid",
+    "from": "抗质粒",
+    "to": "反质粒"
+  },
+  {
+    "key": "AI Core",
+    "from": "AI 核心",
+    "to": "AI核心"
+  },
+  {
+    "key": "Supplies",
+    "from": "补给",
+    "to": "物资补给"
+  },
+  {
+    "key": "Alchemy",
+    "from": "炼金",
+    "to": "炼金术"
+  },
+  {
+    "key": "Pylon",
+    "from": "能量塔",
+    "to": "水晶塔"
+  },
+  {
+    "key": "Terraform",
+    "from": "行星改造",
+    "to": "重塑星球"
+  },
+  {
+    "key": "Frigate",
+    "from": "巡防舰",
+    "to": "大型护卫舰"
+  },
+  {
+    "key": "Freighter",
+    "from": "货船",
+    "to": "星际货轮"
+  },
+  {
+    "key": "Mass Ejector",
+    "from": "大规模弹射器",
+    "to": "质量喷射器"
+  },
+  {
+    "key": "Asphodel Harvester",
+    "from": "极乐收割者",
+    "to": "水仙收割机"
+  },
+  {
+    "key": "Asphodel Stabilizer",
+    "from": "极乐稳定器",
+    "to": "水仙稳定器"
+  },
+  {
+    "key": "Lake Transport",
+    "from": "湖运输船",
+    "to": "血湖运输船"
+  },
+  {
+    "key": "Mana Syphon",
+    "from": "法力虹吸管",
+    "to": "法力虹吸"
+  },
+  {
+    "key": "Neutron Miner",
+    "from": "中子星矿船",
+    "to": "中子矿船"
+  },
+  {
+    "key": "Sacrificial Altar",
+    "from": "献祭祭坛",
+    "to": "祭坛"
+  },
+  {
+    "key": "Sirius B Analysis",
+    "from": "天狼星 B 分析",
+    "to": "分析天狼星B"
+  },
+  {
+    "key": "Tau Pylon",
+    "from": "涛能量塔",
+    "to": "天仓五水晶塔"
+  },
+  {
+    "key": "Tau Colony",
+    "from": "涛聚居地",
+    "to": "天仓五生活区"
+  },
+  {
+    "key": "Asteroid Redirect",
+    "from": "小行星偏转",
+    "to": "小行星变轨"
+  },
+  {
+    "key": "Gather Food",
+    "from": "采集食物",
+    "to": "收集食物"
+  },
+  {
+    "key": "Gather Lumber",
+    "from": "采集木材",
+    "to": "收集木材"
+  },
+  {
+    "key": "Gather Stone",
+    "from": "采集石头",
+    "to": "收集石料"
+  },
+  {
+    "key": "Bioseed",
+    "from": "生物种子",
+    "to": "播种重置"
+  },
+  {
+    "key": "Whitehole",
+    "from": "白洞",
+    "to": "黑洞重置"
+  },
+  {
+    "key": "Apotheosis",
+    "from": "神化",
+    "to": "神灵重置"
+  },
+  {
+    "key": "Ascension",
+    "from": "飞升",
+    "to": "飞升重置"
+  },
+  {
+    "key": "Matrix",
+    "from": "矩阵",
+    "to": "矩阵重置"
+  },
+  {
+    "key": "Cataclysm",
+    "from": "大灾变",
+    "to": "大灾变重置"
+  },
+  {
+    "key": "Warlord",
+    "from": "军阀",
+    "to": "黑暗战神"
+  },
+  {
+    "key": "Unification",
+    "from": "统一",
+    "to": "世界统一"
+  }
+]

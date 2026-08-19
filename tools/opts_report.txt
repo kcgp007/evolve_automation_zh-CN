@@ -1,0 +1,23 @@
+=== OPTION ENTRIES (154) ===
+missing: 20
+
+[hint] "Create new planet by building and powering Terraformer. Atmosphere Terraformer is managed by autoPower. Disable autoPrestige if you want to change custom planet. Otherwise current one will be used , or default one if there's no current. "
+[label] "Total Soldiers"
+[label] "Total Soldiers Max"
+[label] "City Soldiers"
+[label] "City Soldiers Max"
+[label] "Hell Soldiers"
+[label] "Hell Patrols"
+[label] "Hell Patrol Size"
+[label] "Wounded Soldiers"
+[label] "Dead Soldiers"
+[label] "Ship Crew"
+[label] "Mercenary Cost"
+[label] "Total Smelter Slot Count"
+[label] "Total Factory Slot Count"
+[label] "By atomic mass"
+[hint] "Spends more time on resources that are easy to replicate. A resource with 2x the weighting will have roughly 2x the time spent. Based on differences in atomic mass, resources at similar weightings may have very different quantities."
+[label] "By resource quantity"
+[hint] "Spends more time on resources that are hard to replicate. A resource with 2x the weighting will be focused until you have roughly 2x the amount. Resources at similar weightings will have similar quantities."
+[label] "Legacy (deprecated)"
+[hint] "Legacy mode, similar to previous script behavior. Only the resource with the highest weighting is picked. If multiple resources have the same weighting then it will focus exclusively on one of those resources. This mode exists only to give you time to migrate your config to using the priority field."

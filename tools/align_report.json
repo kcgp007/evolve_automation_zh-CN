@@ -1,0 +1,148 @@
+{
+  "changes": [
+    {
+      "key": "Mutual Assured Destruction",
+      "mine": "核爆重置",
+      "official": "共同毁灭原则"
+    },
+    {
+      "key": "Ascension",
+      "mine": "飞升重置",
+      "official": "飞升"
+    },
+    {
+      "key": "Matrix",
+      "mine": "矩阵重置",
+      "official": "矩阵"
+    },
+    {
+      "key": "Scout",
+      "mine": "侦察机",
+      "official": "侦察"
+    },
+    {
+      "key": "Retirement",
+      "mine": "隐退重置",
+      "official": "隐退"
+    },
+    {
+      "key": "Eden",
+      "mine": "伊甸园重置",
+      "official": "伊甸"
+    },
+    {
+      "key": "Research",
+      "mine": "研究",
+      "official": "研发"
+    },
+    {
+      "key": "Servants",
+      "mine": "仆从",
+      "official": "鼬仆"
+    },
+    {
+      "key": "Type",
+      "mine": "类型",
+      "official": "移动"
+    },
+    {
+      "key": "Count",
+      "mine": "数量",
+      "official": "伯爵"
+    },
+    {
+      "key": "Reset",
+      "mine": "重置",
+      "official": "重置统计"
+    },
+    {
+      "key": "Smart",
+      "mine": "智能",
+      "official": " [聪明] 特质"
+    },
+    {
+      "key": "Gain",
+      "mine": "获得",
+      "official": "获取"
+    },
+    {
+      "key": "Dark",
+      "mine": "暗影",
+      "official": "黑暗"
+    },
+    {
+      "key": "Power",
+      "mine": "电力",
+      "official": "强化"
+    },
+    {
+      "key": "Storage",
+      "mine": "仓库",
+      "official": "资源存储"
+    },
+    {
+      "key": "Compact",
+      "mine": "紧凑",
+      "official": " [袖珍] 特质"
+    }
+  ],
+  "conflicts": [
+    {
+      "key": "Dreadnought",
+      "mine": "无畏舰",
+      "official": [
+        "外域无畏舰",
+        "无畏舰"
+      ]
+    },
+    {
+      "key": "Steel",
+      "mine": "钢",
+      "official": [
+        "钢",
+        "钢铁"
+      ]
+    },
+    {
+      "key": "Unemployed",
+      "mine": "失业人口",
+      "official": [
+        "失业",
+        "失业人口"
+      ]
+    },
+    {
+      "key": "Forager",
+      "mine": "寻觅者",
+      "official": [
+        "寻觅者",
+        " [寻觅者] 特质"
+      ]
+    },
+    {
+      "key": "Scavenger",
+      "mine": "拾荒者",
+      "official": [
+        "拾荒者",
+        " [拾荒者] 特质",
+        "清道夫"
+      ]
+    },
+    {
+      "key": "Miner",
+      "mine": "矿工",
+      "official": [
+        "矿工",
+        "中子矿船"
+      ]
+    },
+    {
+      "key": "Gate Turret",
+      "mine": "远古之门炮塔",
+      "official": [
+        "大门炮塔",
+        "远古之门炮塔"
+      ]
+    }
+  ]
+}

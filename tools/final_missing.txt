@@ -1,0 +1,63 @@
+&emsp;All Attractors off above this threat
+&emsp;All Attractors on below this threat
+&emsp;Full patrol rating increase below this home garrison fill percent
+&emsp;Lower Rating for each active Predator Drone by
+&emsp;Lower Rating for each active War Droid by
+&emsp;Lower Rating for each Bootcamp by
+&emsp;Minimum minions required to attack an enemy fortress
+&emsp;Start increasing patrol rating at this home garrison fill percent
+&times;
+1st Pass
+2nd Pass
+3rd Pass
+A.R.P.A.
+Active trigger, processing...
+Assign governor task
+AutoARPA weighting:
+AutoBuild disabled
+By atomic mass
+By resource quantity
+City Soldiers
+City Soldiers Max
+Conflicts with
+Dead Soldiers
+Disabled
+Eject mode
+Hell Patrol Size
+Hell Patrols
+Hell Soldiers
+Id
+If active, the replicator scheduler governor task will be set, the power adjustment will be enabled.
+In
+Legacy (deprecated)
+Legacy mode, similar to previous script behavior. Only the resource with the highest weighting is picked. If multiple resources have the same weighting then it will focus exclusively on one of those resources. This mode exists only to give you time to migrate your config to using the priority field.
+List of message IDs to filter, all game messages can be found
+Locked
+Low priority
+Maximum amount reached
+Mercenary Cost
+Nanite mode
+Not enough storage
+Not needed for current prestige
+Occupy last foreign power once other two are controlled, and unification is researched to speed up unification. Disable if you want annex\\purchase achievements.
+Prioritize keeping materials stockpiled
+Queued project, processing...
+Resource capped
+Ship Crew
+Spends more time on resources that are easy to replicate. A resource with 2x the weighting will have roughly 2x the time spent. Based on differences in atomic mass, resources at similar weightings may have very different quantities.
+Spends more time on resources that are hard to replicate. A resource with 2x the weighting will be focused until you have roughly 2x the amount. Resources at similar weightings will have similar quantities.
+Supply mode
+This condition is met.
+This condition is not met.
+This race have special requirements:
+Too low
+Total Factory Slot Count
+Total Smelter Slot Count
+Total Soldiers
+Total Soldiers Max
+under min materials ratio
+Weighting mode
+Wounded Soldiers
+You have completed an AI Apocalypse with this race and can imitate it.
+You should never see this modal body...
+You should never see this modal header...

@@ -1,0 +1,98 @@
+, Boolean(settingsRaw.overrides[stateKey] || settingsRaw.overrides[smartKey]));
+, currentStateOn));
+, Gain
+, game.loc(
+, this.checked);
+.appendTo(node);
+] : Number.MAX_SAFE_INTEGER;
+{val: "apocalypse", label: "AI Apocalypse", hint: "Perform AI Apocalypse reset by researching Protocol 66 once available"},
+{val: "ascension", label: "Ascension", hint: "Allows research of Incorporeal Existence and Ascension. Ascension Machine is managed by autoPower. Disable autoPrestige if you want to change custom race. Otherwise current one will be used , or default one if there
+{val: "bioseed", label: "Bioseed", hint: "Launches the bioseeder ship to perform prestige when required probes have been constructed"},
+{val: "cataclysm", label: "Cataclysm", hint: "Perform cataclysm reset by researching Dial It To 11 once available"},
+{val: "mad", short_label: "MAD", label: "Mutual Assured Destruction", hint: "MAD prestige once MAD has been researched and all soldiers are home"},
+{val: "none", label: "None", hint: "Endless game"},
+{val: "vacuum", short_label: "Vacuum", label: "Vacuum Collapse", hint: "Build Mana Syphons until the end"},
+{val: "whitehole", label: "Whitehole", hint: "Infuses the blackhole with exotic materials to perform prestige"},
+&emsp;All Attractors off above this threat
+&emsp;All Attractors on below this threat
+&emsp;Full patrol rating increase below this home garrison fill percent
+&emsp;Lower Rating for each active Predator Drone by
+&emsp;Lower Rating for each active War Droid by
+&emsp;Lower Rating for each Bootcamp by
+&emsp;Minimum minions required to attack an enemy fortress
+&emsp;Start increasing patrol rating at this home garrison fill percent
+&times;
+1st Pass
+2nd Pass
+3rd Pass
+A.R.P.A.
+Active trigger, processing...
+addSettingsHeader1(currentNode, "Game Messages");
+addSettingsNumber(currentNode, "arpaStep", "Preferred progress step", "Projects will be weighted and build in this steps. Increasing number can speed up constructing. Step will be adjusted down when preferred step above remaining amount, or surpass storage caps. Weightings below will be multiplied by current step. Projects builded by triggers will always have maximum possible step.");
+addSettingsString(currentNode, "log_prestige_format", "Prestige Log Format", "Available placeholders: {resetType}, {species}, {timestamp} (in game days). Use {eval: XXX } to log custom information");
+addSettingsToggle(currentNode, "arpaScaleWeighting", "Scale weighting with progress", "Projects weighting scales
+addSettingsToggle(currentNode, "hellTurnOffLogMessages", "Turn off patrol and surveyor log messages", "Automatically turns off the hell patrol and surveyor log messages");
+addToggleCallbacks(smartNode, smartKey);
+Assign governor task
+AutoARPA weighting:
+AutoBuild disabled
+buildSettingsSectionImpl($("#script_settings"), sectionId, sectionName, resetFunction, updateSettingsContentFunction);
+By atomic mass
+By resource quantity
+City Soldiers
+City Soldiers Max
+Conflicts with
+Dead Soldiers
+delay: 0,
+Disabled
+Eject mode
+Hell Patrol Size
+Hell Patrols
+Hell Soldiers
+here .
+Id
+If active, the replicator scheduler governor task will be set, the power adjustment will be enabled.
+In
+is demanded
+Legacy (deprecated)
+Legacy mode, similar to previous script behavior. Only the resource with the highest weighting is picked. If multiple resources have the same weighting then it will focus exclusively on one of those resources. This mode exists only to give you time to migrate your config to using the priority field.
+List of message IDs to filter, all game messages can be found
+Locked
+Low priority
+Maximum amount reached
+Mercenary Cost
+minLength: 2,
+Nanite mode
+Not enough storage
+Not needed for current prestige
+null;
+Occupy last foreign power once other two are controlled, and unification is researched to speed up unification. Disable if you want annex\\purchase achievements.
+Prioritize keeping materials stockpiled
+Queued project, processing...
+Resource capped
+return;
+s no broken getter, etc.
+s open
+Ship Crew
+Spends more time on resources that are easy to replicate. A resource with 2x the weighting will have roughly 2x the time spent. Based on differences in atomic mass, resources at similar weightings may have very different quantities.
+Spends more time on resources that are hard to replicate. A resource with 2x the weighting will be focused until you have roughly 2x the amount. Resources at similar weightings will have similar quantities.
+Supply mode
+t demand it here, though, due to order of operations
+t match the search query
+t selected from list
+This condition is met.
+This condition is not met.
+This race have special requirements:
+Too low
+Total Factory Slot Count
+Total Smelter Slot Count
+Total Soldiers
+Total Soldiers Max
+under min materials ratio
+updateSettingsContentFunction(secondaryPrefix);
+Weighting mode
+with current progress, making script more eager to spend resources on finishing nearly constructed projects.");
+Wounded Soldiers
+You have completed an AI Apocalypse with this race and can imitate it.
+You should never see this modal body...
+You should never see this modal header...

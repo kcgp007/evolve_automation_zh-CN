@@ -1,0 +1,22 @@
+total gui strings: 412
+hit: 366, miss: 18
+
+=== MISS ===
+addSettingsToggle | ",\n              set.map(c => game.loc("
+addSettingsToggle | "evo_challenge_${EXPR}"
+addSettingsToggle | "Prioritize keeping materials stockpiled"
+addSettingsToggle | "Aggressively request stockpiling ${EXPR}s + min materials worth of materials to ensure factory and craftsmen can always "
+addSettingsToggle | "Assign governor task"
+addSettingsToggle | "If active, the replicator scheduler governor task will be set, the power adjustment will be enabled."
+addSettingsSelect | ", game.loc("
+addSettingsSelect | "outer_shipyard_${EXPR}"
+addSettingsSelect | ", game.loc("
+addSettingsSelect | "outer_shipyard_${EXPR}"
+addSettingsSelect | "Eject mode"
+addSettingsSelect | "Supply mode"
+addSettingsSelect | "Nanite mode"
+addSettingsSelect | "Weighting mode"
+addSettingsSelect | "Replicator only picks from enabled resources with the current highest valid priority (or -1 priority). After that, repli"
+addOptionUI | "Foreign Affairs"
+addOptionUI | "Foreign Affairs"
+addOptionUI | ", 'Prestige', buildPrestigeSettings);\n            }\n        }\n        else {\n            removePrestigeFromTopBar();\n   "
