@@ -68,9 +68,20 @@
 - `MAD`/`RNA`/`DNA` 等缩写键自映射（值=键）是刻意保留，勿改。
 - 测试脚本的断言更新后要同步更新，勿让过时断言误报。
 
+## 上游文件同步
+
+> **每个新会话开始、以及翻译工作前，先运行：`node tools/check_upstream.js`**（网络不稳，可直接用 GitHub API 校验）。
+
+- 该脚本检查三处：
+  1. `evolve_automation.user.js`：对比 GitHub master blob sha，**不一致时自动覆盖**本地原脚本（只读参考，覆盖安全）。
+  2. `official_en.json`：对比在线 `strings.json`，仅报告键差异，不覆盖。
+  3. `official_zh.json`：对比在线 `strings.zh-CN.json`，仅报告键差异，不覆盖（在线含乱码，本地是修复版）。
+- 原脚本有新版本（`UPDATED`）时：先重跑 `node tools/align_official.js` 与 `node tools/apply_official.js` 对齐新增官方术语，再按标准工作流补齐新文本的翻译，全部测试通过后提交。
+- 注意：脚本用 Node 内置 `https` 直连 GitHub API（`Accept: application/vnd.github.raw`），勿改回 curl 拉 raw.githubusercontent.com（会超时）。
+
 ## 工具目录说明
 
-- **核心维护**（勿删）：`apply_official.js` + `apply_official.json`（官方对齐幂等重放）、`align_official.js`（生成 align_report.json）、`fix_arpa.js`、`test_all_keys.js`、`test_full_dom.js`、`test_modal.js`、`test_final.js`、`test_patterns.js`、`official_en.json`、`official_zh.json`、`align_report.json`
+- **核心维护**（勿删）：`check_upstream.js`（上游同步检查）、`apply_official.js` + `apply_official.json`（官方对齐幂等重放）、`align_official.js`（生成 align_report.json）、`fix_arpa.js`、`test_all_keys.js`、`test_full_dom.js`、`test_modal.js`、`test_final.js`、`test_patterns.js`、`official_en.json`、`official_zh.json`、`align_report.json`
 - **历史归档**（勿用于新工作，仅参考）：`tools/archive/` 下的一次性构建/调试脚本与中间报告。
 
 ## 备注
