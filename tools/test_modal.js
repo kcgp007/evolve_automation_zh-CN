@@ -73,7 +73,7 @@ function runChecks() {
     const switches = [...d.querySelectorAll('#scriptToggles label.switch')];
     const autoPrestige = switches[0];
     const master = switches[1];
-    check('toggle key autoPrestige', autoPrestige.querySelector('span:last-of-type').textContent, '自动声望');
+    check('toggle key autoPrestige', autoPrestige.querySelector('span:last-of-type').textContent, '自动威望');
     check('toggle key master', master.querySelector('span:last-of-type').textContent, '总开关');
     check('toggle title autoPrestige', autoPrestige.getAttribute('title').includes('达到配置的目标'), true);
     check('toggle title master', master.getAttribute('title'), '停止代表玩家执行任何操作。');
@@ -94,7 +94,7 @@ function runChecks() {
     check('cond type title', opt1.getAttribute('title'), '建筑解锁时返回 true');
     const opt2 = $('#scriptModalBody select:nth-of-type(2) option');
     check('comparator option', opt2.textContent.trim(), '与');
-    check('dynamic toggle label', bodyText.includes('切换（自动声望）'), true);
+    check('dynamic toggle label', bodyText.includes('切换（自动威望）'), true);
     check('script notice', bodyText.includes('脚本提示：'), true);
 
     // 动态加入新内容（模拟弹窗重新填充），观察 observer 翻译

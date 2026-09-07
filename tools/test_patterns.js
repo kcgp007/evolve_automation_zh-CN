@@ -95,7 +95,7 @@ setTimeout(() => {
         check('autoarpa', t.includes('自动研究权重：1.5（50%）'), true);
         check('unused storage', t.includes('仍有未使用的存储'), true);
         check('queued building', t.includes('建筑排队中，正在处理...'), true);
-        check('bioseed prestige', t.includes('播种声望不需要'), true);
+        check('bioseed prestige', t.includes('播种威望不需要'), true);
         check('provided moon', t.includes('当前不需要月球支援'), true);
         check('missing red', t.includes('缺少 红星支援 无法运作'), true);
         check('provided sun', t.includes('当前不需要太阳支援'), true);
@@ -104,7 +104,7 @@ setTimeout(() => {
 
         // confirm 特殊场景
         window.confirm('MAD has already been researched. You may prestige immediately. Are you sure you want to toggle this prestige?');
-        check('confirm prestige', confirmLog[0], 'MAD 已被研究。 你可以立即进行声望。确定要切换此声望吗？');
+        check('confirm prestige', confirmLog[0], 'MAD 已被研究。 你可以立即进行威望。确定要切换此威望吗？');
         window.confirm("Warning! Imported settings includes evaluated code, which will have full access to browser page, and can be potentially dangerous.\nOnly continue if you trust the source. Injected code:\neval(1)");
         check('confirm import', confirmLog[1], '警告！导入的设置包含求值代码，其将拥有浏览器页面的完全访问权限，可能有潜在危险。\n仅当你信任来源时才继续。注入的代码：\neval(1)');
 
