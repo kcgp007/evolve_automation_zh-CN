@@ -113,7 +113,7 @@ function runChecks() {
         eject.innerHTML = '<span id="script_eject_top_row" class="has-text-danger">Auto Eject</span>';
         d.body.appendChild(eject);
         setTimeout(() => {
-            check('auto eject label', d.getElementById('script_eject_top_row').textContent.trim(), '自动排出');
+            check('auto eject label', d.getElementById('script_eject_top_row').textContent.trim(), '自动喷射');
             console.log('\nPASS:', pass, 'FAIL:', fail);
             process.exit(fail ? 1 : 0);
         }, 5500);
