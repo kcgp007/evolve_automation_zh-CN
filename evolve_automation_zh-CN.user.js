@@ -205,7 +205,7 @@
         },
         {
             re: /^(.+) Max Knowledge required$/,
-            rep: function (m, p1) { return "需要知识上限 " + p1; }
+            rep: function (m, p1) { return "知识上限需达到 " + p1; }
         },
         {
             re: /^(.+) \(([^)]+)\)$/,
