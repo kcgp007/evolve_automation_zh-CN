@@ -204,6 +204,10 @@
             rep: function (m, p1) { var t = lookup(TRANSLATIONS, p1); return "当前不需要" + (t !== null ? t : p1); }
         },
         {
+            re: /^(.+) Max Knowledge required$/,
+            rep: function (m, p1) { return "需要知识上限 " + p1; }
+        },
+        {
             re: /^(.+) \(([^)]+)\)$/,
             rep: function (m, p1, p2) {
                 var t1 = lookup(TRANSLATIONS, p1);

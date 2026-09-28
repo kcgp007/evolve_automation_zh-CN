@@ -54,6 +54,7 @@ setTimeout(() => {
       <div><span>Provided Sun Support not currently needed</span></div>
       <div><span>Provided Belt Support not currently needed</span></div>
       <div><span>Missing Elerium to operate</span></div>
+      <div><span>6.0M Max Knowledge required</span></div>
     `;
     d.body.appendChild(root);
 
@@ -101,6 +102,7 @@ setTimeout(() => {
         check('provided sun', t.includes('当前不需要太阳支援'), true);
         check('provided belt', t.includes('当前不需要小行星带支援'), true);
         check('missing elerium', t.includes('缺少 超铀 无法运作'), true);
+        check('max knowledge required', t.includes('需要知识上限 6.0M'), true);
 
         // confirm 特殊场景
         window.confirm('MAD has already been researched. You may prestige immediately. Are you sure you want to toggle this prestige?');
