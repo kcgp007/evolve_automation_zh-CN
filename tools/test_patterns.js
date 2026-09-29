@@ -106,6 +106,8 @@ setTimeout(() => {
       <div><span>Next mech (titan)</span></div>
       <div><span>Troll</span></div>
       <div><span>Human</span></div>
+      <div><span>Junker</span></div>
+      <div><span>Ship Yard Blueprint (The True Path)</span></div>
       <div><span>Wendigo</span></div>
       <div><span>Ultra Sludge</span></div>
       <div><span>Hellspawn</span></div>
@@ -113,6 +115,7 @@ setTimeout(() => {
       <div><span>Fungi</span></div>
       <div><span>Aquatic</span></div>
       <div><span>Reset: MAD, Species: Human, Duration: 5 days</span></div>
+      <div><span>Reset: Bioseed, Species: Junker, Duration: 7 days</span></div>
       <div><span>${SAFE_MODE}</span></div>
     `;
     d.body.appendChild(root);
@@ -243,6 +246,10 @@ setTimeout(() => {
 
         // 种族 species（race_* 官方值）
         check('species human', t.includes('人类'), true);
+        check('species junker', t.includes('瓦尔迪'), true);
+
+        // True Path 术语统一为官方值「智械黎明」
+        check('true path terminology', t.includes('船坞蓝图（智械黎明）'), true);
         check('species troll', t.includes('巨魔'), true);
         check('species wendigo', t.includes('温迪戈'), true);
         check('species ultra sludge', t.includes('终极软泥'), true);
@@ -254,6 +261,7 @@ setTimeout(() => {
 
         // 威望日志模板：species 段已可翻译
         check('prestige log mad', t.includes('重置：MAD，种族：人类，时长：5 天'), true);
+        check('prestige log junker', t.includes('重置：播种重置，种族：瓦尔迪，时长：7 天'), true);
 
         // confirm 特殊场景
         window.confirm('MAD has already been researched. You may prestige immediately. Are you sure you want to toggle this prestige?');
