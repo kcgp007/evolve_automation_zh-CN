@@ -33,6 +33,17 @@
 
 新增动态模板正则时，放在 PATTERNS 数组末尾通用括号规则（`^(.+) \(([^)]+)\)$`）**之前**，避免被通用规则截获。
 
+### 易漏的四个坑
+
+1. **PATTERNS 的 rep 若拼接捕获组，必须用 `lookup(TRANSLATIONS, p1)` 二次查字典**，否则内嵌英文原样漏出。已知已修：`This race have special requirements:` 三条、`If logging is enabled then logs X actions`、`Script Notice: X`。
+2. **同一个英文词有两条通道、查两张表**：`addSettings*` 的 section 名走 `SECTION_NAMES`+`translateSection()`，而 `addOptionUI(...)` 第 3 个参数（弹窗标题）走 `TRANSLATIONS`。凡是被 `addOptionUI` 当标题用的词（如 `Hell`、`Fleet`、`Prestige`）**两张表都要有**。
+3. **建筑/资源显示名会原样进 Buildings/Projects 权重表**（`buildings[id].name` → `buildTableLabel`），所以 `new Action("Soul Well", …)` 这类名字需要在字典里有键，否则表里中英混排。译法优先取 `tools/official_zh.json` 官方值。
+4. **不进 `WATCH_CONTAINERS` 的通道加了键也不生效**。已知的未覆盖通道：游戏消息队列（`GameLog` → `poly.messageQueue`）、`#script_script-warning` 警告节点、高级触发器的 jQuery-UI autocomplete 菜单（挂 `document.body`）、`<textarea>` 的 value。这类情况属"必要不充分"，键先备着，机制要单独补。
+
+## 审计脚本
+
+`node tools/archive/audit_untranslated.js`（加 `--json` 输出机器可读）会扫描英文原脚本的界面字符串、送进 `translateText`、列出原样返回的条目（疑似界面文本 / 疑似内部误报两组）。补完翻译后跑一次看数字下降，是最快的回归体检手段。
+
 ## 标准工作流（翻译新文本）
 
 1. 在英文原脚本 `evolve_automation.user.js` 中定位文本来源（`rg "文本" evolve_automation.user.js`），确认是静态还是动态。

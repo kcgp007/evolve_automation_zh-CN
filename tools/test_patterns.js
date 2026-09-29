@@ -15,6 +15,7 @@ function check(label, found, expected) {
 
 setTimeout(() => {
     const d = window.document;
+    const SAFE_MODE = "Script safe mode is active to let you solve problems in your configuration.\nThe masterScriptToggle is always disabled in this mode, and your overrides don't get evaluated.\nFix the problems that required you to use this mode, then remove ?safemode from the URL to deactivate.";
     const root = d.createElement('div');
     root.id = 'script_settings';
     root.innerHTML = `
@@ -55,6 +56,15 @@ setTimeout(() => {
       <div><span>Provided Belt Support not currently needed</span></div>
       <div><span>Missing Elerium to operate</span></div>
       <div><span>6.0M Max Knowledge required</span></div>
+      <div><span>Warning! This race have special requirements: Failed Experiment unlocked. This condition is not met.</span></div>
+      <div><span>Complete an Ascension reset and be on a suitable planet for your chosen genus (not set).</span></div>
+      <div><span>If logging is enabled then logs Construction actions</span></div>
+      <div><span>Script Notice: Script Error</span></div>
+      <div><span>Soul Well</span></div>
+      <div><span>Cabin</span></div>
+      <div><span>Prestige</span></div>
+      <div><span>Garrison is destroyed</span></div>
+      <div><span>${SAFE_MODE}</span></div>
     `;
     d.body.appendChild(root);
 
@@ -103,6 +113,15 @@ setTimeout(() => {
         check('provided belt', t.includes('当前不需要小行星带支援'), true);
         check('missing elerium', t.includes('缺少 超铀 无法运作'), true);
         check('max knowledge required', t.includes('知识上限需达到 6.0M'), true);
+        check('race requirement nested', t.includes('警告！此种族有特殊要求：实验失败已解锁。 此条件未满足。'), true);
+        check('ascension genus template', t.includes('完成一次飞升重置，并处于适合你所选属的行星（未设置）。'), true);
+        check('logging nested', t.includes('如果启用日志，则记录建设操作'), true);
+        check('script notice nested', t.includes('脚本提示：脚本错误'), true);
+        check('soul well key', t.includes('灵魂井'), true);
+        check('cabin key', t.includes('小木屋'), true);
+        check('prestige key', t.includes('威望'), true);
+        check('garrison destroyed key', t.includes('驻军已被摧毁'), true);
+        check('safe mode block', t.some(x => x.indexOf('脚本安全模式已激活，以便你排查配置中的问题。') === 0), true);
 
         // confirm 特殊场景
         window.confirm('MAD has already been researched. You may prestige immediately. Are you sure you want to toggle this prestige?');
