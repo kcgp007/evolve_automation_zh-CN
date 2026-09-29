@@ -38,7 +38,10 @@
 1. **PATTERNS 的 rep 若拼接捕获组，必须用 `lookup(TRANSLATIONS, p1)` 二次查字典**，否则内嵌英文原样漏出。已知已修：`This race have special requirements:` 三条、`If logging is enabled then logs X actions`、`Script Notice: X`。
 2. **同一个英文词有两条通道、查两张表**：`addSettings*` 的 section 名走 `SECTION_NAMES`+`translateSection()`，而 `addOptionUI(...)` 第 3 个参数（弹窗标题）走 `TRANSLATIONS`。凡是被 `addOptionUI` 当标题用的词（如 `Hell`、`Fleet`、`Prestige`）**两张表都要有**。
 3. **建筑/资源显示名会原样进 Buildings/Projects 权重表**（`buildings[id].name` → `buildTableLabel`），所以 `new Action("Soul Well", …)` 这类名字需要在字典里有键，否则表里中英混排。译法优先取 `tools/official_zh.json` 官方值。
-4. **不进 `WATCH_CONTAINERS` 的通道加了键也不生效**。已知的未覆盖通道：游戏消息队列（`GameLog` → `poly.messageQueue`）、`#script_script-warning` 警告节点、高级触发器的 jQuery-UI autocomplete 菜单（挂 `document.body`）、`<textarea>` 的 value。这类情况属"必要不充分"，键先备着，机制要单独补。
+4. **不进 `WATCH_CONTAINERS` 的通道加了键也不生效**。已知的未覆盖通道：`#script-script-warning` 警告节点、高级触发器的 jQuery-UI autocomplete 菜单（挂 `document.body`）、`<textarea>` 的 value。这类情况属"必要不充分"，键先备着，机制要单独补。
+
+   > 游戏消息队列**已覆盖**（本轮新增）：`GameLog.log*` 的消息落在 `#msgQueueLog`（`#msgQueue` 的子节点，每条消息是 `$('<p class="has-text-COLOR"></p>').text(msg)` 纯文本注入），因此把 `'msgQueue'` 整容器加进 `WATCH_CONTAINERS` 即可，只翻 DOM、不污染存档里的 `global.lastMsg`。
+   > **不要改成包装 `window.evolve.messageQueue`**：游戏内部约 150 处调用走的是 ES module 作用域里的函数绑定，改 `window.evolve` 属性拦不到；且 `messageQueue` 会把 msg 写进 `global.lastMsg` 并随存档序列化，翻译第一个参数等于把中文写进存档。
 
 ## 审计脚本
 

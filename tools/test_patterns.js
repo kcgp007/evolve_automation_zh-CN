@@ -73,10 +73,19 @@ setTimeout(() => {
     `;
     d.body.appendChild(root);
 
+    // 游戏消息日志容器：自动化脚本 GameLog 的英文提示会进入这里
+    const msgRoot = d.createElement('div');
+    msgRoot.id = 'msgQueue';
+    msgRoot.innerHTML = `
+      <p class="has-text-success">Hired a mercenary to join the garrison.</p>
+      <p class="has-text-danger">Wrong race, soft resetting and trying again.</p>
+    `;
+    d.body.appendChild(msgRoot);
+
     setTimeout(() => {
         const texts = [];
         const walk = (el) => { if (el.nodeType === 3) texts.push(el.nodeValue); el.childNodes.forEach(walk); };
-        walk(root);
+        [root, msgRoot].forEach(walk);
         const t = texts.map(x => x.trim()).filter(Boolean);
 
         check('supported', t.includes('支持的补给：42'), true);
@@ -134,6 +143,10 @@ setTimeout(() => {
         check('custom sludge cost', t.includes('自定义与软泥 10'), true);
         check('major label', t.includes('主要'), true);
         check('genus label', t.includes('属'), true);
+
+        // msgQueue 容器（游戏消息日志）
+        check('msgQueue observed', t.includes('已聘请一名雇佣兵加入驻军。'), true);
+        check('msgQueue wrong race', t.includes('种族错误，软重置后重试。'), true);
 
         // confirm 特殊场景
         window.confirm('MAD has already been researched. You may prestige immediately. Are you sure you want to toggle this prestige?');

@@ -421,7 +421,8 @@
 
     // 需要长期观察（DOM 动态变化）的容器
     // 'popper' 为游戏 tooltip 提示框容器，脚本动态注入 extraDescription / state.tooltips 文本，需要持续翻译
-    var WATCH_CONTAINERS = ['script_settings', 'autoScriptContainer', 'scriptModal', 'popper', 's-prestige-type'];
+    // 'msgQueue' 为游戏消息日志容器，自动化脚本 GameLog 的英文提示会进入这里（只翻 DOM，不污染存档里的 global.lastMsg）
+    var WATCH_CONTAINERS = ['script_settings', 'autoScriptContainer', 'scriptModal', 'popper', 's-prestige-type', 'msgQueue'];
     // 只做低频强制翻译、不长期观察的容器（游戏各 tab 内的主题开关/标签）
     var QUIET_TARGETS = ['script_importExportButtons', 'eject', 'spireSupply', 'mTabCivil', 'resStorage', 'market', 'resEjector', 'resCargo', 'arpaPhysics', 'mechList'];
 
