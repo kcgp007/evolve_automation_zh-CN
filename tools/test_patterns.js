@@ -98,6 +98,21 @@ setTimeout(() => {
       <div><span>Launching Raid campaign against Zaron (1) with ~25.0% advantage.</span></div>
       <div><span>Launching Siege campaign against Valdi (2) with 40.0% advantage.</span></div>
       <div><span>Reset: Bioseed, Species: Human, Duration: 1234 days</span></div>
+      <div><span>Ambush</span></div>
+      <div><span>Raid</span></div>
+      <div><span>Pillage</span></div>
+      <div><span>Assault</span></div>
+      <div><span>Siege</span></div>
+      <div><span>Next mech (titan)</span></div>
+      <div><span>Troll</span></div>
+      <div><span>Human</span></div>
+      <div><span>Wendigo</span></div>
+      <div><span>Ultra Sludge</span></div>
+      <div><span>Hellspawn</span></div>
+      <div><span>Shroomi</span></div>
+      <div><span>Fungi</span></div>
+      <div><span>Aquatic</span></div>
+      <div><span>Reset: MAD, Species: Human, Duration: 5 days</span></div>
       <div><span>${SAFE_MODE}</span></div>
     `;
     d.body.appendChild(root);
@@ -210,11 +225,35 @@ setTimeout(() => {
         // 间谍 / 战役动态模板
         check('covert operation', t.includes('正在对 Zaron (1) 执行「破坏」间谍行动。'), true);
         check('train spy', t.includes('训练间谍以对抗 Zaron (1)。'), true);
-        check('launch campaign approx', t.includes('对 Zaron (1) 发起战役（Raid），优势 ~25.0%。'), true);
-        check('launch campaign exact', t.includes('对 Valdi (2) 发起战役（Siege），优势 40.0%。'), true);
+        check('launch campaign approx', t.includes('对 Zaron (1) 发起战役（突袭），优势 ~25.0%。'), true);
+        check('launch campaign exact', t.includes('对 Valdi (2) 发起战役（围城），优势 40.0%。'), true);
 
         // 威望日志模板
-        check('prestige log format', t.includes('重置：播种重置，种族：Human，时长：1234 天'), true);
+        check('prestige log format', t.includes('重置：播种重置，种族：人类，时长：1234 天'), true);
+
+        // 战役类型名（civics_garrison_tactic_*）
+        check('tactic ambush', t.includes('伏击'), true);
+        check('tactic raid', t.includes('突袭'), true);
+        check('tactic pillage', t.includes('抢劫'), true);
+        check('tactic assault', t.includes('突击'), true);
+        check('tactic siege', t.includes('围城'), true);
+
+        // 机甲尺寸 id
+        check('mech size titan', t.includes('下一台机甲（泰坦）'), true);
+
+        // 种族 species（race_* 官方值）
+        check('species human', t.includes('人类'), true);
+        check('species troll', t.includes('巨魔'), true);
+        check('species wendigo', t.includes('温迪戈'), true);
+        check('species ultra sludge', t.includes('终极软泥'), true);
+        check('species hellspawn', t.includes('渊嗣'), true);
+        check('species shroomi', t.includes('蘑菇人'), true);
+        // 种族 species（genelab_genus_* 官方值）
+        check('species fungi', t.includes('真菌'), true);
+        check('species aquatic', t.includes('水生生物'), true);
+
+        // 威望日志模板：species 段已可翻译
+        check('prestige log mad', t.includes('重置：MAD，种族：人类，时长：5 天'), true);
 
         // confirm 特殊场景
         window.confirm('MAD has already been researched. You may prestige immediately. Are you sure you want to toggle this prestige?');
