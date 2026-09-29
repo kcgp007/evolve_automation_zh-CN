@@ -69,6 +69,35 @@ setTimeout(() => {
       <div><span>10 for Custom and Sludge</span></div>
       <div><span>Major</span></div>
       <div><span>Genus</span></div>
+      <div><span>Graveyard</span></div>
+      <div><span>Shrine</span></div>
+      <div><span>Supercollider</span></div>
+      <div><span>Monument</span></div>
+      <div><span>Railway</span></div>
+      <div><span>Nexus</span></div>
+      <div><span>Depot</span></div>
+      <div><span>Purchase</span></div>
+      <div><span>Ship</span></div>
+      <div><span>Mech</span></div>
+      <div><span>Plans</span></div>
+      <div><span>Warning</span></div>
+      <div><span>Post-Transcendence</span></div>
+      <div><span>Post-Preeminence</span></div>
+      <div><span>Evil</span></div>
+      <div><span>Flier</span></div>
+      <div><span>1st Warning</span></div>
+      <div><span>2nd Warning</span></div>
+      <div><span>True Path</span></div>
+      <div><span>Power</span></div>
+      <div><span>Lone Survivor</span></div>
+      <div><span>Some Tech (True Path)</span></div>
+      <div><span>Next mech (1.5)</span></div>
+      <div><span>Conflicts with A, B for X, Y (Mech)</span></div>
+      <div><span>Performing &quot;Sabotage&quot; covert operation against Zaron (1).</span></div>
+      <div><span>Training a spy to send against Zaron (1).</span></div>
+      <div><span>Launching Raid campaign against Zaron (1) with ~25.0% advantage.</span></div>
+      <div><span>Launching Siege campaign against Valdi (2) with 40.0% advantage.</span></div>
+      <div><span>Reset: Bioseed, Species: Human, Duration: 1234 days</span></div>
       <div><span>${SAFE_MODE}</span></div>
     `;
     d.body.appendChild(root);
@@ -147,6 +176,45 @@ setTimeout(() => {
         // msgQueue 容器（游戏消息日志）
         check('msgQueue observed', t.includes('已聘请一名雇佣兵加入驻军。'), true);
         check('msgQueue wrong race', t.includes('种族错误，软重置后重试。'), true);
+
+        // 建筑/项目名（进 Buildings/Projects 权重表）
+        check('key graveyard', t.includes('墓地'), true);
+        check('key shrine', t.includes('圣地'), true);
+        check('key supercollider', t.includes('超级对撞机'), true);
+        check('key monument', t.includes('纪念碑'), true);
+        check('key railway', t.includes('铁路'), true);
+        check('key nexus', t.includes('魔法回路'), true);
+        check('key depot', t.includes('贮藏所'), true);
+        check('key purchase', t.includes('收购'), true);
+        check('key ship', t.includes('飞船'), true);
+        check('key mech', t.includes('机甲'), true);
+        check('key plans', t.includes('计划'), true);
+        check('key warning', t.includes('预警'), true);
+        check('key post-transcendence', t.includes('超越之后'), true);
+        check('key post-preeminence', t.includes('卓越之前'), true);
+
+        // 科技区分词 Technology.techDiscriminators
+        check('disc evil', t.includes('邪恶'), true);
+        check('disc flier', t.includes('飞行'), true);
+        check('disc 1st warning', t.includes('第一次预警'), true);
+        check('disc 2nd warning', t.includes('第二次预警'), true);
+        check('disc true path', t.includes('智械黎明'), true);
+        check('disc true path in parens', t.includes('Some Tech（智械黎明）'), true);
+        check('disc power unchanged', t.includes('电力'), true);
+        check('disc lone survivor unchanged', t.includes('孤独幸存者'), true);
+
+        // 冲突目标：name + cause
+        check('next mech target', t.includes('下一台机甲（1.5）'), true);
+        check('conflict cause translated', t.includes('与A, B冲突，争用X, Y（机甲）'), true);
+
+        // 间谍 / 战役动态模板
+        check('covert operation', t.includes('正在对 Zaron (1) 执行「破坏」间谍行动。'), true);
+        check('train spy', t.includes('训练间谍以对抗 Zaron (1)。'), true);
+        check('launch campaign approx', t.includes('对 Zaron (1) 发起战役（Raid），优势 ~25.0%。'), true);
+        check('launch campaign exact', t.includes('对 Valdi (2) 发起战役（Siege），优势 40.0%。'), true);
+
+        // 威望日志模板
+        check('prestige log format', t.includes('重置：播种重置，种族：Human，时长：1234 天'), true);
 
         // confirm 特殊场景
         window.confirm('MAD has already been researched. You may prestige immediately. Are you sure you want to toggle this prestige?');
