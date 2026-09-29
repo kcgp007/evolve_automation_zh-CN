@@ -64,6 +64,11 @@ setTimeout(() => {
       <div><span>Cabin</span></div>
       <div><span>Prestige</span></div>
       <div><span>Garrison is destroyed</span></div>
+      <div><span>Hired 3 mercenaries to join the garrison.</span></div>
+      <div><span>10 for Custom</span></div>
+      <div><span>10 for Custom and Sludge</span></div>
+      <div><span>Major</span></div>
+      <div><span>Genus</span></div>
       <div><span>${SAFE_MODE}</span></div>
     `;
     d.body.appendChild(root);
@@ -81,7 +86,7 @@ setTimeout(() => {
         check('ctrl click', t.includes('Ctrl+点击选项以打开'), true);
         check('advanced config', t.includes('高级配置'), true);
         check('conflicts', t.includes('与A, B冲突，争用X, Y（cause）'), true);
-        check('bypass pattern', t.some(x => x.indexOf('警告！此种族有特殊要求：xxx 此条件已绕过。种族将有惩罚。') === 0), true);
+        check('bypass pattern', t.some(x => x.indexOf('警告！此种族有特殊要求：xxx 此条件已绕过。种族将有 25% 惩罚。') === 0), true);
         check('game.loc untouched', t.includes('outer_shipyard_core'), true);
         check('prestige label', t.includes('核爆重置'), true);
         check('endless', t.includes('无尽游戏'), true);
@@ -122,6 +127,13 @@ setTimeout(() => {
         check('prestige key', t.includes('威望'), true);
         check('garrison destroyed key', t.includes('驻军已被摧毁'), true);
         check('safe mode block', t.some(x => x.indexOf('脚本安全模式已激活，以便你排查配置中的问题。') === 0), true);
+
+        // 动态模板：雇佣兵 / Custom 费用 / 表格类型标签
+        check('hired mercenaries', t.includes('已聘请 3 名雇佣兵加入驻军。'), true);
+        check('custom cost', t.includes('自定义 10'), true);
+        check('custom sludge cost', t.includes('自定义与软泥 10'), true);
+        check('major label', t.includes('主要'), true);
+        check('genus label', t.includes('属'), true);
 
         // confirm 特殊场景
         window.confirm('MAD has already been researched. You may prestige immediately. Are you sure you want to toggle this prestige?');
